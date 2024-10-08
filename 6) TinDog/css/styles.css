@@ -16,9 +16,9 @@ html {
   width: 14px;
 }
 ::-webkit-scrollbar-track {
-  /* border: 2px solid #2d3748; */
-  background: rgb(255, 233, 233)209, 180, 180)209, 180, 180);
+  background: rgb(255, 233, 233); /* Correct syntax */
 }
+
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(45deg, #ff4c68, #ef8172);
   border-radius: 10px;
