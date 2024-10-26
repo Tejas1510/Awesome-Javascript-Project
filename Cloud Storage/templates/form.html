@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        .form-container {
+            width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .hidden {
+            display: none;
+        }
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <div class="form-container">
+        <h2>Medical Report Form</h2>
+        <form id="medical-form">
+            <div class="form-group">
+                <label for="patient-name">Patient Name:</label>
+                <input type="text" id="patient-name" name="patient-name" required>
+            </div>
+            <div class="form-group">
+                <label for="patient-age">Age:</label>
+                <input type="number" id="patient-age" name="patient-age" required>
+
+            </div>
+            <div class="form-group">
+                <label for="past-disease">Any Past Disease?</label>
+                <select id="past-disease" name="past-disease">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+            </div>
+            <div class="form-group hidden" id="disease-details">
+                <label for="disease-type">Specify Disease:</label>
+                <input type="text" id="disease-type" name="disease-type">
+            </div>
+            <div class="form-group">
+                <label for="past-surgery">Any Past Surgery?</label>
+                <select id="past-surgery" name="past-surgery">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+            </div>
+            <div class="form-group hidden" id="surgery-details">
+                <label for="surgery-type">Specify Surgery:</label>
+                <input type="text" id="surgery-type" name="surgery-type" placeholder="Type surgery type">
+            </div>
+
+            <div class="form-group">
+                <label for="present-illness">Present Illness:</label>
+                <textarea id="present-illness" name="present-illness" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="has-allergies">Any Allergies?</label>
+                <select id="has-allergies" name="has-allergies">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+            </div>
+            <div class="form-group hidden" id="allergies-description">
+                <label for="allergies-details">Allergies Description:</label>
+                <textarea id="allergies-details" name="allergies-details" rows="4"></textarea>
+            </div>
+
+            <div class="form-group" id="medicine-section">
+                <label for="medicine-prescription">Medicine/Prescription 1:</label>
+                <input type="text" id="medicine-prescription" name="medicine-prescription">
+                <label for="medication-timing">Medication Timing:</label>
+                <select id="medication-timing" name="medication-timing">
+                    <option value="after_eating">After Eating</option>
+                    <option value="after_eating_3_times">3 times After Eating</option>
+                    <option value="before_eating_3_times">3 times before Eating</option>
+                    <option value="before_eating">Before Eating only in the morning</option>
+                    <option value="3_times_a_day">3 Times a Day</option>
+                </select>
+            </div>
+
+            <button type="button" id="add-medicine-button">Add Medicine</button>
+
+            <div class="form-group">
+                <label for="medical-report-file">Upload Medical Report (PDF or Image):</label>
+                <input type="file" id="medical-report-file" name="medical-report-file" accept=".pdf, .jpg, .jpeg, .png">
+            </div>
+
+            <button type="button" id="submit-button">Submit</button>
+
+            <a href="{{ url_for('form') }}" target="_blank"> </a>
+
+
+        </form>
+    </div>
+
+    <div id="message" class="hidden">
+    </div>
+
+    <script>
+        const addMedicineButton = document.getElementById('add-medicine-button');
+        const medicineSection = document.getElementById('medicine-section');
+        let medicineCounter = 2;
+
+        addMedicineButton.addEventListener('click', function () {
+            const clonedMedicineSection = medicineSection.cloneNode(true);
+            clonedMedicineSection.querySelector('label').textContent = `Medicine/Prescription ${medicineCounter}:`;
+            clonedMedicineSection.querySelector('input').value = '';
+            clonedMedicineSection.querySelector('select').value = 'after_eating';
+            medicineSection.parentNode.insertBefore(clonedMedicineSection, addMedicineButton);
+            medicineCounter++;
+        });
+
+        const hasAllergiesSelect = document.getElementById('has-allergies');
+        const allergiesDescription = document.getElementById('allergies-description');
+
+        hasAllergiesSelect.addEventListener('change', function () {
+            if (hasAllergiesSelect.value === 'yes') {
+                allergiesDescription.classList.remove('hidden');
+            } else {
+                allergiesDescription.classList.add('hidden');
+            }
+        });
+
+        const submitButton = document.getElementById('submit-button');
+        const messageDiv = document.getElementById('message');
+
+        submitButton.addEventListener('click', function () {
+            const formData = {
+                "patient-name": document.getElementById('patient-name').value,
+                "patient-age": document.getElementById('patient-age').value,
+                "past-disease": document.getElementById('past-disease').value,
+                "disease-type": document.getElementById('disease-type').value,
+                "past-surgery": document.getElementById('past-surgery').value,
+                "surgery-type": document.getElementById('surgery-type').value,
+                "present-illness": document.getElementById('present-illness').value,
+                "has-allergies": document.getElementById('has-allergies').value,
+                "allergies-details": document.getElementById('allergies-details').value,
+            };
+
+            const medicines = document.querySelectorAll('.form-group[id^="medicine-section"]');
+            formData.medicines = [];
+
+            medicines.forEach(function (medicine, index) {
+                formData.medicines.push({
+                    "medicine-prescription": medicine.querySelector('input[name="medicine-prescription"]').value,
+                    "medication-timing": medicine.querySelector('select[name="medication-timing"]').value
+                });
+            });
+
+
+            fetch('/submit', {
+                method: 'POST',
+                body: JSON.stringify(formData),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message) {
+                    messageDiv.textContent = data.message;
+                    messageDiv.classList.remove('hidden');
+                } else if (data.error) {
+                    messageDiv.textContent = `Error: ${data.error}`;
+                    messageDiv.classList.remove('hidden');
+                }
+            })
+            .catch(error => {
+                messageDiv.textContent = `Error: ${error}`;
+                messageDiv.classList.remove('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

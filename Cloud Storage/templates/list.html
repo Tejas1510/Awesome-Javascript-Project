@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        .list-container {
+            width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="list-container">
+        <h2>List of Medical Reports</h2>
+        <ul>
+            {% for report in reports %}
+                <li>
+                    <a href="{{ url_for('download_report', filename=report) }}" target="_blank">{{ report }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
