@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Files</title>
+    <style>
+        .file-preview {
+            margin-bottom: 20px;
+        }
+        .warning {
+            color: red;
+            font-weight: bold;
+        }
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+        .loading {
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload Files</h1>
+
+    <form id="upload-form" enctype="multipart/form-data">
+        <input type="file" name="file" id="file" accept="image/*, audio/*, video/*" multiple>
+        <button type="submit">Upload</button>
+    </form>
+
+    <div id="file-preview" class="file-preview"></div>
+    <div id="warning-message" class="warning" style="display: none;">Unsafe content detected! File(s) cannot be uploaded.</div>
+    <div id="success-message" class="success" style="display: none;">Upload successful!</div>
+    <div id="loading-message" class="loading" style="display: none;">Detecting unsafe content...</div>
+
+    <script>
+        document.getElementById('upload-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Reset warning message, success message, and loading message
+            document.getElementById('warning-message').style.display = 'none';
+            document.getElementById('success-message').style.display = 'none';
+            document.getElementById('loading-message').style.display = 'block';
+
+            // Retrieve form data
+            const formData = new FormData(this);
+
+            // Send a POST request to the backend to submit the file(s)
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Display uploaded files on the interface
+                const filePreview = document.getElementById('file-preview');
+                filePreview.innerHTML = ''; // Clear previous previews
+                data.safe_files.forEach(file => {
+                    const fileElement = document.createElement('div');
+                    fileElement.textContent = file;
+                    fileElement.style.color = 'green'; // Set color for safe files
+                    filePreview.appendChild(fileElement);
+                });
+
+                data.unsafe_files.forEach(file => {
+                    const fileElement = document.createElement('div');
+                    fileElement.textContent = file;
+                    fileElement.style.color = 'red'; // Set color for unsafe files
+                    filePreview.appendChild(fileElement);
+                });
+
+                // Display messages based on Rekognition results
+                if (data.status === 'error') {
+                    // Unsafe content detected
+                    document.getElementById('warning-message').style.display = 'block';
+                } else {
+                    // Safe content detected
+                    document.getElementById('success-message').style.display = 'block';
+                }
+
+                // Hide loading message
+                document.getElementById('loading-message').style.display = 'none';
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

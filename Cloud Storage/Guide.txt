@@ -1,0 +1,25 @@
+
+
+1]Prerequisites before execution :
+	a) VSCODE, PyCharm or any IDE to run the python program
+
+2]Steps to execute the program :
+	a) UPLOAD (Only for 1 demo test) :
+		1. Open Cloud Storage folder in your IDE 
+		2. On terminal run the upload.py file.
+		3. You will get localhost (e.g.  * Running on http://127.0.0.1:5000) 
+		4. Follow the link in your browser.
+		5. Fill dummy details for the test.
+		6. Click the submit button.
+		7. You will get the notification of 'PDF file uploaded to S3 successfully' message.	
+		8. If you want to upload again, you have to change the name of file in the code manually so that previous file would not get overwritten.
+	
+	b) LIST :
+		1. Open Cloud Storage folder in your IDE 
+		2. On terminal run the list.py file.
+		3. You will get localhost (e.g.  * Running on http://127.0.0.1:5000) 
+		4. Follow the link in your browser.
+		5. You will see the file in PDF format that you just uploaded. (Generally this shows all the files that are uploaded on 		   the cloud, for this demo you will see only one)
+		6. By clicking on the name, the pdf file will get downloaded in your system.
+		7. You can verify the content that you uploaded in cloud is correct or not.
+ n
