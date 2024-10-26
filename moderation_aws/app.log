@@ -1,0 +1,91 @@
+2024-02-09 22:59:39,855 - WARNING -  * Debugger is active!
+2024-02-09 22:59:39,855 - INFO -  * Debugger PIN: 125-297-349
+2024-02-09 23:01:02,044 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-02-09 23:01:02,045 - INFO - [33mPress CTRL+C to quit[0m
+2024-02-09 23:01:02,048 - INFO -  * Restarting with stat
+2024-02-09 23:01:02,955 - WARNING -  * Debugger is active!
+2024-02-09 23:01:02,955 - INFO -  * Debugger PIN: 125-297-349
+2024-02-09 23:01:14,286 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-02-09 23:01:14,289 - INFO - [33mPress CTRL+C to quit[0m
+2024-02-09 23:01:14,291 - INFO -  * Restarting with stat
+2024-02-09 23:01:15,198 - WARNING -  * Debugger is active!
+2024-02-09 23:01:15,203 - INFO -  * Debugger PIN: 125-297-349
+2024-02-09 23:02:22,932 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-02-09 23:02:22,932 - INFO - [33mPress CTRL+C to quit[0m
+2024-02-09 23:02:22,935 - INFO -  * Restarting with stat
+2024-02-09 23:02:23,882 - WARNING -  * Debugger is active!
+2024-02-09 23:02:23,887 - INFO -  * Debugger PIN: 125-297-349
+2024-02-09 23:09:00,661 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-02-09 23:09:00,661 - INFO - [33mPress CTRL+C to quit[0m
+2024-02-09 23:09:00,665 - INFO -  * Restarting with stat
+2024-02-09 23:09:01,538 - WARNING -  * Debugger is active!
+2024-02-09 23:09:01,544 - INFO -  * Debugger PIN: 126-934-418
+2024-02-09 23:09:52,049 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-02-09 23:09:52,049 - INFO - [33mPress CTRL+C to quit[0m
+2024-02-09 23:09:52,057 - INFO -  * Restarting with stat
+2024-02-09 23:09:54,505 - WARNING -  * Debugger is active!
+2024-02-09 23:09:54,509 - INFO -  * Debugger PIN: 126-934-418
+2024-02-09 23:11:06,674 - INFO - 127.0.0.1 - - [09/Feb/2024 23:11:06] "GET / HTTP/1.1" 200 -
+2024-02-09 23:11:06,881 - INFO - 127.0.0.1 - - [09/Feb/2024 23:11:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-02-09 23:11:17,528 - INFO - 127.0.0.1 - - [09/Feb/2024 23:11:17] "POST /upload HTTP/1.1" 200 -
+2024-02-09 23:12:59,190 - INFO -  * Detected change in 'C:\\Users\\athar\\OneDrive\\Desktop\\awsPy\\HackFusion\\app.py', reloading
+2024-02-09 23:12:59,512 - INFO -  * Restarting with stat
+2024-02-09 23:13:37,146 - INFO -  * Restarting with stat
+2024-02-09 23:13:38,149 - WARNING -  * Debugger is active!
+2024-02-09 23:13:38,150 - INFO -  * Debugger PIN: 126-934-418
+2024-02-09 23:13:42,897 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-02-09 23:13:42,897 - INFO - [33mPress CTRL+C to quit[0m
+2024-02-09 23:13:42,899 - INFO -  * Restarting with stat
+2024-02-09 23:13:43,750 - WARNING -  * Debugger is active!
+2024-02-09 23:13:43,753 - INFO -  * Debugger PIN: 126-934-418
+2024-02-09 23:16:38,803 - INFO -  * Detected change in 'C:\\Users\\athar\\OneDrive\\Desktop\\awsPy\\HackFusion\\app.py', reloading
+2024-02-09 23:16:38,970 - INFO -  * Restarting with stat
+2024-02-09 23:17:00,107 - INFO -  * Restarting with stat
+2024-02-09 23:17:01,074 - WARNING -  * Debugger is active!
+2024-02-09 23:17:01,076 - INFO -  * Debugger PIN: 126-934-418
+2024-02-09 23:17:02,041 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-02-09 23:17:02,041 - INFO - [33mPress CTRL+C to quit[0m
+2024-02-09 23:17:02,043 - INFO -  * Restarting with stat
+2024-02-09 23:17:02,911 - WARNING -  * Debugger is active!
+2024-02-09 23:17:02,915 - INFO -  * Debugger PIN: 126-934-418
+2024-02-09 23:17:16,447 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-02-09 23:17:16,447 - INFO - [33mPress CTRL+C to quit[0m
+2024-02-09 23:17:16,447 - INFO -  * Restarting with stat
+2024-02-09 23:17:17,320 - WARNING -  * Debugger is active!
+2024-02-09 23:17:17,326 - INFO -  * Debugger PIN: 126-934-418
+2024-02-09 23:17:33,132 - INFO - 127.0.0.1 - - [09/Feb/2024 23:17:33] "GET / HTTP/1.1" 200 -
+2024-02-09 23:17:44,005 - INFO - 127.0.0.1 - - [09/Feb/2024 23:17:44] "POST /upload HTTP/1.1" 200 -
+2024-02-09 23:29:32,252 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-02-09 23:29:32,252 - INFO - [33mPress CTRL+C to quit[0m
+2024-02-09 23:29:32,255 - INFO -  * Restarting with stat
+2024-02-09 23:29:33,130 - WARNING -  * Debugger is active!
+2024-02-09 23:29:33,133 - INFO -  * Debugger PIN: 126-934-418
+2024-02-09 23:29:42,311 - INFO - 127.0.0.1 - - [09/Feb/2024 23:29:42] "GET / HTTP/1.1" 200 -
+2024-02-09 23:29:49,567 - INFO - 127.0.0.1 - - [09/Feb/2024 23:29:49] "POST /upload HTTP/1.1" 200 -
+2024-02-09 23:33:37,487 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-02-09 23:33:37,487 - INFO - [33mPress CTRL+C to quit[0m
+2024-02-09 23:33:37,487 - INFO -  * Restarting with stat
+2024-02-09 23:33:38,452 - WARNING -  * Debugger is active!
+2024-02-09 23:33:38,452 - INFO -  * Debugger PIN: 126-934-418
+2024-02-09 23:33:40,579 - INFO - 127.0.0.1 - - [09/Feb/2024 23:33:40] "GET / HTTP/1.1" 200 -
+2024-02-09 23:33:47,285 - INFO - 127.0.0.1 - - [09/Feb/2024 23:33:47] "POST /upload HTTP/1.1" 200 -
+2024-02-09 23:40:15,573 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-02-09 23:40:15,573 - INFO - [33mPress CTRL+C to quit[0m
+2024-02-09 23:40:15,576 - INFO -  * Restarting with stat
+2024-02-09 23:40:16,418 - WARNING -  * Debugger is active!
+2024-02-09 23:40:16,421 - INFO -  * Debugger PIN: 126-934-418
+2024-02-09 23:40:22,654 - INFO - 127.0.0.1 - - [09/Feb/2024 23:40:22] "GET / HTTP/1.1" 200 -
+2024-02-09 23:40:28,870 - INFO - 127.0.0.1 - - [09/Feb/2024 23:40:28] "POST /upload HTTP/1.1" 200 -
+2024-02-10 00:44:16,987 - INFO -  * Detected change in 'C:\\Users\\athar\\OneDrive\\Desktop\\awsPy\\HackFusion\\app.py', reloading
+2024-02-10 00:44:17,118 - INFO -  * Restarting with stat
